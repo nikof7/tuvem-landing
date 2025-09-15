@@ -1,0 +1,212 @@
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6fc;
+  color: #222;
+}
+
+.hero {
+  background: linear-gradient(90deg, #3949ab 60%, #1de9b6 100%);
+  color: #fff;
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+.hero-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.slogan {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: #1de9b6;
+  color: #222;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.cta-btn:hover {
+  background: #fff;
+  color: #3949ab;
+}
+
+.sobre-nosotros {
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.sobre-nosotros h2 {
+  margin-top: 0;
+  color: #3949ab;
+}
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about-icon {
+  width: 80px;
+  flex-shrink: 0;
+}
+.servicios {
+  background: #f7f9ff;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.servicios h2 {
+  margin-top: 0;
+  color: #3949ab;
+  text-align: center;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.servicio-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.servicio-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.servicio-card img {
+  width: 48px;
+  margin-bottom: 0.5rem;
+}
+.servicio-card h3 {
+  margin: 0.5rem 0 0.5rem 0;
+  color: #1de9b6;
+}
+.beneficios {
+  margin-top: 2rem;
+  background: #e3e6fd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.beneficios h3 {
+  margin-top: 0;
+  color: #3949ab;
+}
+.beneficios ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.contacto {
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  text-align: center;
+}
+.contacto h2 {
+  margin-top: 0;
+  color: #3949ab;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.contacto input,
+.contacto textarea {
+  padding: 0.8rem;
+  border: 1px solid #bfc2d6;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7f9ff;
+}
+.contacto button {
+  background: #1de9b6;
+  color: #222;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.contacto button:hover {
+  background: #3949ab;
+  color: #fff;
+}
+.redes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.redes a img {
+  transition: transform 0.2s;
+}
+.redes a:hover img {
+  transform: scale(1.2);
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #3949ab;
+  color: #fff;
+  margin-top: 2rem;
+  border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 900px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .servicios-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .servicios, .contacto, .sobre-nosotros {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+}
