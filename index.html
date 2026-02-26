@@ -1,86 +1,1250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta name="facebook-domain-verification" content="e9gt7y0ehc2sskthxo487nuqcit66j" />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicolás Fernández</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-content">
-      <img src="https://img.icons8.com/ios-filled/100/ffffff/robot-2.png" alt="Irrequieto Logo" class="logo">
-      <h1>Nicolás Fernández</h1>
-      <h2>IRREQUIETO</h2>
-      <p class="slogan">Automatiza tu negocio en WhatsApp, Facebook e Instagram</p>
-      <a href="#contacto" class="cta-btn">Solicita tu demo</a>
-    </div>
-  </header>
-  <section class="sobre-nosotros">
-    <h2>Sobre nosotros</h2>
-    <div class="about-flex">
-      <img src="https://img.icons8.com/fluency/96/robot-2.png" alt="Automatización" class="about-icon">
-      <div>
-        <p>
-          Nicolás Fernández y su equipo son apasionados por la tecnología y la innovación. Crean soluciones automatizadas para empresas y emprendedores, optimizando comunicación y procesos en WhatsApp, Facebook e Instagram.
-        </p>
-        <p>
-          Más de 5 años de experiencia en bots inteligentes, integraciones y desarrollo personalizado. Nuestro objetivo: que tu negocio crezca y se digitalice de forma eficiente.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="servicios">
-    <h2>Servicios</h2>
-    <div class="servicios-grid">
-      <div class="servicio-card">
-        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
-        <h3>WhatsApp</h3>
-        <p>Bots para atención al cliente, respuestas automáticas, campañas y gestión de consultas.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://img.icons8.com/color/48/facebook-messenger.png" alt="Facebook Messenger">
-        <h3>Facebook Messenger</h3>
-        <p>Integración de chatbots, automatización de respuestas y manejo de leads.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram">
-        <h3>Instagram</h3>
-        <p>Automatización de mensajes directos, gestión de comentarios y seguimiento de interacciones.</p>
-      </div>
-      <div class="servicio-card">
-        <img src="https://img.icons8.com/color/48/code.png" alt="Desarrollo personalizado">
-        <h3>Desarrollo personalizado</h3>
-        <p>Soluciones a medida para integrar tus sistemas y mejorar tus procesos.</p>
-      </div>
-    </div>
-    <div class="beneficios">
-      <h3>¿Por qué elegirnos?</h3>
-      <ul>
-        <li>Mejora la eficiencia y ahorra tiempo en la gestión de tus redes.</li>
-        <li>Atención personalizada y soporte técnico especializado.</li>
-        <li>Soluciones escalables y seguras.</li>
-        <li>Más de 5 años de experiencia en automatización y desarrollo.</li>
+  <head>
+    <meta
+      name="facebook-domain-verification"
+      content="e9gt7y0ehc2sskthxo487nuqcit66j"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicolás Fernández · IRREQUIETO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --blue: #3949ab;
+        --blue-dark: #283593;
+        --blue-light: #5c6bc0;
+        --mint: #1de9b6;
+        --mint-dark: #00bfa5;
+        --bg: #f0f2fa;
+        --white: #ffffff;
+        --text: #1a1c2e;
+        --text-muted: #666b8a;
+        --border: rgba(57, 73, 171, 0.12);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      /* ─── NAV ─── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+      }
+      .nav-brand img {
+        width: 32px;
+      }
+      .nav-brand-text {
+        font-family: "Space Mono", monospace;
+        font-size: 0.85rem;
+        color: var(--blue);
+        letter-spacing: 1px;
+      }
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--blue);
+      }
+      .nav-cta {
+        background: var(--blue);
+        color: var(--white) !important;
+        padding: 0.5rem 1.3rem;
+        border-radius: 50px;
+        transition: background 0.2s !important;
+      }
+      .nav-cta:hover {
+        background: var(--blue-dark) !important;
+        color: #fff !important;
+      }
+
+      /* ─── HERO ─── */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 7rem 3rem 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      /* Geometric background shapes */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle at 60% 40%,
+          rgba(57, 73, 171, 0.18) 0%,
+          transparent 65%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: -80px;
+        left: -80px;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(29, 233, 182, 0.15) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .hero-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(57, 73, 171, 0.08);
+        border: 1px solid rgba(57, 73, 171, 0.2);
+        border-radius: 50px;
+        padding: 0.35rem 1rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--blue);
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      .hero-label span {
+        width: 6px;
+        height: 6px;
+        background: var(--mint);
+        border-radius: 50%;
+        display: inline-block;
+        animation: blink 1.5s ease-in-out infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4.2rem);
+        font-weight: 700;
+        line-height: 1.1;
+        color: var(--text);
+        margin-bottom: 1.2rem;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--blue);
+      }
+      .hero h1 .accent {
+        position: relative;
+        display: inline-block;
+      }
+      .hero h1 .accent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 2px;
+        right: 0;
+        height: 4px;
+        background: var(--mint);
+        border-radius: 4px;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: underline-in 0.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1)
+          forwards;
+      }
+      @keyframes underline-in {
+        to {
+          transform: scaleX(1);
+        }
+      }
+      .hero-sub {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 2.2rem;
+        font-weight: 400;
+        max-width: 480px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--blue);
+        color: #fff;
+        padding: 0.85rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1rem;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          background 0.2s;
+        box-shadow: 0 4px 20px rgba(57, 73, 171, 0.35);
+      }
+      .btn-primary:hover {
+        background: var(--blue-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(57, 73, 171, 0.4);
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        font-size: 0.95rem;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .btn-secondary:hover {
+        color: var(--blue);
+      }
+      .btn-arrow {
+        font-size: 1.1rem;
+        transition: transform 0.2s;
+      }
+      .btn-secondary:hover .btn-arrow {
+        transform: translateX(4px);
+      }
+
+      /* hero visual side */
+      .hero-visual {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-card-stack {
+        position: relative;
+        width: 320px;
+        height: 360px;
+      }
+      .h-card {
+        position: absolute;
+        background: var(--white);
+        border-radius: 18px;
+        padding: 1.4rem;
+        box-shadow: 0 8px 40px rgba(57, 73, 171, 0.13);
+        border: 1px solid var(--border);
+      }
+      .h-card-main {
+        width: 280px;
+        top: 40px;
+        left: 20px;
+        z-index: 3;
+        animation: float 4s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .h-card-back1 {
+        width: 260px;
+        top: 20px;
+        left: 40px;
+        z-index: 2;
+        opacity: 0.6;
+        transform: rotate(4deg);
+      }
+      .h-card-back2 {
+        width: 240px;
+        top: 5px;
+        left: 55px;
+        z-index: 1;
+        opacity: 0.3;
+        transform: rotate(8deg);
+      }
+      .h-card-header {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-bottom: 1rem;
+      }
+      .h-card-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--blue), var(--mint));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+      .h-card-name {
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .h-card-sub {
+        color: var(--text-muted);
+        font-size: 0.75rem;
+      }
+      .h-card-msg {
+        background: var(--bg);
+        border-radius: 10px;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        margin-bottom: 0.6rem;
+      }
+      .h-card-msg.sent {
+        background: var(--blue);
+        color: #fff;
+        text-align: right;
+      }
+      .h-card-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(29, 233, 182, 0.12);
+        color: var(--mint-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 0.25rem 0.7rem;
+        border-radius: 50px;
+        margin-top: 0.5rem;
+        letter-spacing: 0.5px;
+      }
+      .h-card-tag::before {
+        content: "⚡";
+      }
+
+      /* floating badges */
+      .hero-badge {
+        position: absolute;
+        background: var(--white);
+        border-radius: 12px;
+        padding: 0.6rem 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        white-space: nowrap;
+        animation: float 4s ease-in-out infinite;
+      }
+      .hero-badge-1 {
+        top: -10px;
+        right: -10px;
+        animation-delay: 0.5s;
+      }
+      .hero-badge-2 {
+        bottom: 20px;
+        left: -30px;
+        animation-delay: 1s;
+      }
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--mint);
+      }
+
+      /* stats row */
+      .hero-stats {
+        display: flex;
+        gap: 2.5rem;
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+      .stat-item {
+      }
+      .stat-num {
+        font-family: "Space Mono", monospace;
+        font-size: 1.6rem;
+        color: var(--blue);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.2rem;
+      }
+      .stat-label {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* ─── SECTION COMMON ─── */
+      section {
+        padding: 5rem 3rem;
+      }
+      .section-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .section-label {
+        font-family: "Space Mono", monospace;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: var(--mint-dark);
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+      }
+      .section-title {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+      .section-title span {
+        color: var(--blue);
+      }
+      .section-desc {
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        max-width: 560px;
+        line-height: 1.7;
+      }
+
+      /* ─── SOBRE NOSOTROS ─── */
+      .sobre {
+        background: var(--white);
+      }
+      .sobre-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+      .sobre-visual {
+        position: relative;
+      }
+      .sobre-big-num {
+        font-family: "Space Mono", monospace;
+        font-size: 9rem;
+        font-weight: 700;
+        color: var(--blue);
+        opacity: 0.07;
+        line-height: 1;
+        position: absolute;
+        top: -2rem;
+        left: -1rem;
+        pointer-events: none;
+        user-select: none;
+      }
+      .sobre-pills {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .sobre-pill {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        background: var(--bg);
+        border-radius: 14px;
+        padding: 1.2rem 1.5rem;
+        border: 1px solid var(--border);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .sobre-pill:hover {
+        transform: translateX(6px);
+        box-shadow: 0 4px 20px rgba(57, 73, 171, 0.1);
+      }
+      .sobre-pill-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--blue), var(--blue-light));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.2rem;
+      }
+      .sobre-pill-text strong {
+        display: block;
+        font-size: 0.95rem;
+        margin-bottom: 0.15rem;
+      }
+      .sobre-pill-text span {
+        font-size: 0.83rem;
+        color: var(--text-muted);
+      }
+      .sobre-content .section-desc {
+        margin-bottom: 1.5rem;
+      }
+
+      /* ─── SERVICIOS ─── */
+      .servicios-section {
+        background: var(--bg);
+      }
+      .servicios-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: end;
+        margin-bottom: 3rem;
+      }
+      .servicios-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .servicio-card {
+        background: var(--white);
+        border-radius: 18px;
+        padding: 2rem;
+        border: 1px solid var(--border);
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .servicio-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--blue), var(--mint));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+      }
+      .servicio-card:hover::before {
+        transform: scaleX(1);
+      }
+      .servicio-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(57, 73, 171, 0.13);
+      }
+      .servicio-card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.2rem;
+      }
+      .servicio-card-icon img {
+        width: 30px;
+      }
+      .servicio-card h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text);
+      }
+      .servicio-card p {
+        font-size: 0.88rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* por qué elegirnos */
+      .beneficios {
+        background: linear-gradient(
+          135deg,
+          var(--blue) 0%,
+          var(--blue-light) 100%
+        );
+        border-radius: 22px;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      .beneficios-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.5rem;
+      }
+      .beneficios-sub {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.95rem;
+      }
+      .beneficios-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+      }
+      .beneficios-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.92rem;
+        line-height: 1.5;
+      }
+      .beneficios-list li::before {
+        content: "";
+        flex-shrink: 0;
+        margin-top: 5px;
+        width: 18px;
+        height: 18px;
+        background: var(--mint);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-size: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      /* ─── CONTACTO ─── */
+      .contacto-section {
+        background: var(--white);
+      }
+      .contacto-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+      }
+      .contacto-info {
+        padding-top: 1rem;
+      }
+      .contacto-info .section-desc {
+        margin-bottom: 2rem;
+      }
+      .contacto-channels {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .channel-item {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        padding: 0.9rem 1.2rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition:
+          border-color 0.2s,
+          background 0.2s,
+          transform 0.2s;
+      }
+      .channel-item:hover {
+        border-color: var(--blue);
+        background: var(--bg);
+        transform: translateX(4px);
+      }
+      .channel-item img {
+        width: 26px;
+      }
+      .channel-item span {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 400;
+      }
+
+      /* form */
+      .contacto-form {
+        background: var(--bg);
+        border-radius: 20px;
+        padding: 2.5rem;
+        border: 1px solid var(--border);
+      }
+      .form-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+      .form-subtitle {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        margin-bottom: 1.8rem;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+      }
+      .form-group label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text);
+        letter-spacing: 0.3px;
+      }
+      .form-group input,
+      .form-group textarea {
+        font-family: "DM Sans", sans-serif;
+        padding: 0.75rem 1rem;
+        border: 1.5px solid var(--border);
+        border-radius: 10px;
+        font-size: 0.92rem;
+        background: var(--white);
+        color: var(--text);
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        resize: vertical;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgba(57, 73, 171, 0.1);
+      }
+      .form-group textarea {
+        min-height: 110px;
+      }
+      .form-submit {
+        width: 100%;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        padding: 0.9rem;
+        border-radius: 50px;
+        font-family: "DM Sans", sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+        box-shadow: 0 4px 16px rgba(57, 73, 171, 0.3);
+        margin-top: 0.5rem;
+      }
+      .form-submit:hover {
+        background: var(--blue-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(57, 73, 171, 0.4);
+      }
+
+      /* ─── FOOTER ─── */
+      footer {
+        background: var(--text);
+        color: rgba(255, 255, 255, 0.5);
+        padding: 2.5rem 3rem;
+      }
+      .footer-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .footer-brand img {
+        width: 28px;
+        opacity: 0.7;
+      }
+      .footer-brand-name {
+        font-family: "Space Mono", monospace;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 1px;
+      }
+      .footer-links {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+      }
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.83rem;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .footer-copy {
+        font-size: 0.8rem;
+      }
+
+      /* ─── RESPONSIVE ─── */
+      @media (max-width: 960px) {
+        nav {
+          padding: 1rem 1.5rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        section {
+          padding: 4rem 1.5rem;
+        }
+        .hero {
+          padding: 6rem 1.5rem 3rem;
+        }
+        .hero-inner {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+        .hero-visual {
+          display: none;
+        }
+        .hero-stats {
+          gap: 1.5rem;
+        }
+        .sobre-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .sobre-visual {
+          display: none;
+        }
+        .servicios-header {
+          grid-template-columns: 1fr;
+        }
+        .servicios-grid {
+          grid-template-columns: 1fr;
+        }
+        .beneficios {
+          grid-template-columns: 1fr;
+        }
+        .contacto-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .footer-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-brand">
+        <img
+          src="https://img.icons8.com/ios-filled/100/3949ab/robot-2.png"
+          alt="Logo"
+        />
+        <span class="nav-brand-text">IRREQUIETO</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto" class="nav-cta">Solicitar demo</a></li>
       </ul>
-    </div>
-  </section>
-  <section class="contacto" id="contacto">
-    <h2>Contacto</h2>
-    <form>
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="¿En qué podemos ayudarte?" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="redes">
-      <a href="#" title="WhatsApp"><img src="https://img.icons8.com/color/32/whatsapp--v1.png" alt="WhatsApp"></a>
-      <a href="#" title="Facebook"><img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook"></a>
-      <a href="#" title="Instagram"><img src="https://img.icons8.com/color/32/instagram-new.png" alt="Instagram"></a>
-    </div>
-  </section>
-  <footer>
-    <p>&copy; 2025 NICOLÁS FERNÁNDEZ Todos los derechos reservados.</p>
-  </footer>
-</body>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-label"><span></span> Automatización inteligente</div>
+          <h1>
+            Tu negocio en<br />
+            <em>Instagram, WhatsApp</em><br />
+            y <span class="accent">Facebook</span><br />en piloto automático.
+          </h1>
+          <p class="hero-sub">
+            Creamos bots inteligentes e integraciones personalizadas para que tu
+            marca responda, venda y crezca — sin esfuerzo manual.
+          </p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn-primary">Solicitar demo gratuita</a>
+            <a href="#servicios" class="btn-secondary"
+              >Ver servicios <span class="btn-arrow">→</span></a
+            >
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Años de experiencia</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">24/7</div>
+              <div class="stat-label">Disponibilidad</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Mensajes automatizados</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="h-card h-card-back2"></div>
+            <div class="h-card h-card-back1"></div>
+            <div class="h-card h-card-main">
+              <div class="h-card-header">
+                <div class="h-card-avatar">🤖</div>
+                <div>
+                  <div class="h-card-name">Bot IRREQUIETO</div>
+                  <div class="h-card-sub">Instagram DM · Activo</div>
+                </div>
+              </div>
+              <div class="h-card-msg">
+                Hola! Quería info sobre el producto 👋
+              </div>
+              <div class="h-card-msg sent">¡Hola! Claro, te cuento todo 🚀</div>
+              <div class="h-card-msg">¿Tienen envíos a Córdoba?</div>
+              <div class="h-card-msg sent">
+                Sí, enviamos a todo el país en 24–48hs 📦
+              </div>
+              <div class="h-card-tag">Respondido automáticamente</div>
+            </div>
+            <div class="hero-badge hero-badge-1">
+              <div class="badge-dot"></div>
+              Bot activo
+            </div>
+            <div class="hero-badge hero-badge-2">
+              ⚡ 0.3s respuesta promedio
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="sobre" id="sobre">
+      <div class="section-inner">
+        <div class="sobre-grid">
+          <div class="sobre-visual">
+            <div class="sobre-big-num">5+</div>
+            <div class="sobre-pills">
+              <div class="sobre-pill">
+                <div class="sobre-pill-icon">🤖</div>
+                <div class="sobre-pill-text">
+                  <strong>Bots inteligentes</strong>
+                  <span>Diseñados para conversaciones reales</span>
+                </div>
+              </div>
+              <div class="sobre-pill">
+                <div class="sobre-pill-icon">⚡</div>
+                <div class="sobre-pill-text">
+                  <strong>Integraciones personalizadas</strong>
+                  <span>Conectamos tus sistemas sin fricción</span>
+                </div>
+              </div>
+              <div class="sobre-pill">
+                <div class="sobre-pill-icon">📈</div>
+                <div class="sobre-pill-text">
+                  <strong>Resultados medibles</strong>
+                  <span>Más ventas, menos tiempo manual</span>
+                </div>
+              </div>
+              <div class="sobre-pill">
+                <div class="sobre-pill-icon">🛡️</div>
+                <div class="sobre-pill-text">
+                  <strong>Soporte especializado</strong>
+                  <span>Estamos cuando nos necesitás</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sobre-content">
+            <div class="section-label">Quiénes somos</div>
+            <h2 class="section-title">
+              Apasionados por<br /><span>automatizar</span> lo que más importa
+            </h2>
+            <p class="section-desc">
+              Nicolás Fernández y su equipo llevan más de 5 años creando
+              soluciones automatizadas para empresas y emprendedores.
+              Optimizamos comunicación y procesos en WhatsApp, Facebook e
+              Instagram para que puedas enfocarte en hacer crecer tu negocio.
+            </p>
+            <p class="section-desc">
+              Nuestro objetivo es simple: que tu negocio crezca y se digitalice
+              de forma eficiente, sin fricciones y con tecnología que realmente
+              funciona.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios-section" id="servicios">
+      <div class="section-inner">
+        <div class="servicios-header">
+          <div>
+            <div class="section-label">Lo que hacemos</div>
+            <h2 class="section-title">
+              Servicios que<br /><span>transforman</span> tu presencia digital
+            </h2>
+          </div>
+          <p class="section-desc">
+            Desde chatbots conversacionales hasta integraciones complejas,
+            cubrimos todo el ecosistema de mensajería de Meta.
+          </p>
+        </div>
+
+        <div class="servicios-grid">
+          <div class="servicio-card">
+            <div class="servicio-card-icon">
+              <img
+                src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                alt="WhatsApp"
+              />
+            </div>
+            <h3>WhatsApp</h3>
+            <p>
+              Bots para atención al cliente, respuestas automáticas, campañas
+              masivas y gestión inteligente de consultas. Disponible 24/7.
+            </p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-card-icon">
+              <img
+                src="https://img.icons8.com/color/48/facebook-messenger.png"
+                alt="Facebook Messenger"
+              />
+            </div>
+            <h3>Facebook Messenger</h3>
+            <p>
+              Integración de chatbots, automatización de respuestas y manejo de
+              leads con flujos conversacionales personalizados.
+            </p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-card-icon">
+              <img
+                src="https://img.icons8.com/color/48/instagram-new.png"
+                alt="Instagram"
+              />
+            </div>
+            <h3>Instagram</h3>
+            <p>
+              Automatización de mensajes directos, gestión de comentarios,
+              respuestas a menciones y seguimiento de interacciones.
+            </p>
+          </div>
+          <div class="servicio-card">
+            <div class="servicio-card-icon">
+              <img
+                src="https://img.icons8.com/color/48/code.png"
+                alt="Desarrollo"
+              />
+            </div>
+            <h3>Desarrollo personalizado</h3>
+            <p>
+              Soluciones a medida para integrar tus CRM, tiendas online o
+              sistemas internos con tus canales de mensajería.
+            </p>
+          </div>
+        </div>
+
+        <div class="beneficios">
+          <div>
+            <p class="beneficios-title">¿Por qué elegirnos?</p>
+            <p class="beneficios-sub">
+              Más de 5 años creando automatizaciones que funcionan de verdad
+            </p>
+          </div>
+          <ul class="beneficios-list">
+            <li>
+              Mejorá la eficiencia y ahorrá tiempo en la gestión de tus redes
+            </li>
+            <li>Atención personalizada y soporte técnico especializado</li>
+            <li>Soluciones escalables, seguras y adaptadas a tu negocio</li>
+            <li>Más de 5 años de experiencia en automatización y desarrollo</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto-section" id="contacto">
+      <div class="section-inner">
+        <div class="contacto-grid">
+          <div class="contacto-info">
+            <div class="section-label">Hablemos</div>
+            <h2 class="section-title">
+              ¿Listo para<br /><span>automatizar</span> tu negocio?
+            </h2>
+            <p class="section-desc">
+              Contanos qué necesitás y te preparamos una demo gratuita y
+              personalizada para tu negocio.
+            </p>
+            <div class="contacto-channels">
+              <a href="#" class="channel-item">
+                <img
+                  src="https://img.icons8.com/color/48/whatsapp--v1.png"
+                  alt="WhatsApp"
+                />
+                <div>
+                  <div>WhatsApp</div>
+                  <span>Respuesta rápida</span>
+                </div>
+              </a>
+              <a href="#" class="channel-item">
+                <img
+                  src="https://img.icons8.com/color/48/instagram-new.png"
+                  alt="Instagram"
+                />
+                <div>
+                  <div>Instagram</div>
+                  <span>@irrequieto</span>
+                </div>
+              </a>
+              <a href="#" class="channel-item">
+                <img
+                  src="https://img.icons8.com/color/48/facebook-new.png"
+                  alt="Facebook"
+                />
+                <div>
+                  <div>Facebook</div>
+                  <span>Nicolás Fernández · IRREQUIETO</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contacto-form">
+            <div class="form-title">Solicitar demo</div>
+            <div class="form-subtitle">Te respondemos en menos de 24 horas</div>
+            <form>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="tu@email.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="mensaje">¿En qué podemos ayudarte?</label>
+                <textarea
+                  id="mensaje"
+                  placeholder="Contanos sobre tu negocio y qué necesitás automatizar..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                Enviar mensaje →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img
+            src="https://img.icons8.com/ios-filled/100/ffffff/robot-2.png"
+            alt="Logo"
+          />
+          <span class="footer-brand-name">IRREQUIETO</span>
+        </div>
+        <ul class="footer-links">
+          <li><a href="privacy-policy.html">Política de Privacidad</a></li>
+          <li><a href="#sobre">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <span class="footer-copy"
+          >&copy; 2025 Nicolás Fernández. Todos los derechos reservados.</span
+        >
+      </div>
+    </footer>
+  </body>
 </html>
